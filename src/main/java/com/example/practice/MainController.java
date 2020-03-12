@@ -30,9 +30,9 @@ public class MainController {
     @ResponseBody
     public List<Sample> start() throws Exception {
 
-        // List<Sample> samples = mapper.getSamples(1);
+        List<Sample> samples = mapper.getSamples(2);
 
-        List<Sample> samples = sqlSession.selectList("com.example.practice.service.Mapper.getSamples", makeParameter());
+        // List<Sample> samples = sqlSession.selectList("com.example.practice.service.Mapper.getSamples", makeParameter());
         
         for (Sample sample : samples) {
             System.out.println("id: " + sample.getId());
@@ -48,5 +48,4 @@ public class MainController {
         parameters.put("limit", 2);
         return parameters;
     }
-
 }
