@@ -4,7 +4,7 @@
 <mapper namespace="com.example.practice.service.Mapper">
 
     <select id="getSamples" parameterType="com.example.practice.vo.Sample" resultType="com.example.practice.vo.Sample">
-        select * from demo
+        select * from demo limit 0, ${limit}
     </select>
 
 </mapper>
